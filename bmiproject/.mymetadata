@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="bmiproject"
+  id="myeclipse.1499128662836"
+  context-root="/bmiproject"
+  j2ee-spec="5.0"
+  archive="bmiproject.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+

@@ -1,0 +1,103 @@
+@charset "utf-8";
+/*重置样式，去掉边框*/
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	background: skyblue;
+}
+#box{
+	width: 80%;
+	/*前提是：有宽度，是块元素，才居中*/
+	margin: 0 auto;
+}
+/*包含选择器[必须有包含关系]，它的权重等于权重之和*/
+/*块元素，宽度不写其宽度的默认等于父元素的宽度
+ * 高度不写，由其内容来决定
+ * */
+#box h2{
+	text-align: center;
+	padding: 25px 0px;
+}
+#box h4{
+	padding: 15px 0px;
+}
+#box hr{
+	margin: 10px auto;
+}
+/*群组选择器，其权重等于它本身*/
+#box #h_num,#box #w_num{
+	width: 200px;
+	height: 28px;
+}
+/*input:内联块元素，img*/
+#box input[type=button],#box input[type=submit]{
+	width: 60%;
+	height: 38px;
+	/*display: block;*/
+	margin: 0 auto;
+	background-color: yellowgreen;
+	border:1px solid cornsilk ;
+	font-size:medium ;
+}
+#box #table1{
+	width: 100%;
+	margin-top:20px ;
+	background-color:cornflowerblue;
+}
+#table1 td{
+	text-align: center;
+	padding: 10px 0px;
+}
+#table1 tr:nth-child(2){
+	background-color:palegreen ;
+}
+#table1 tr:nth-child(3){
+	background-color: limegreen;
+}
+#table1 tr:nth-child(4){
+	background-color: yellow;
+}
+#table1 tr:nth-child(5){
+	background-color: gold;
+}
+.result{
+	background-color: cornflowerblue;
+	margin-top: 30px;
+	/*当子元素全部添加浮动之后，父元素会出现高度塌陷，此时给父元素添加override:hidden，可解决此bug*/
+	overflow: hidden;
+	padding: 20px 0px;
+}
+.result p{
+	width: 50%;
+	float: left;
+	text-align: center;
+}
+#table2{
+	background-color: cornflowerblue;
+	margin-top:10px ;
+	width: 100%;
+}
+#table2 td,#table2 th{
+	text-align: center;
+	padding: 10px 0px;
+}
+#table2 #tr1{
+	background-color: cornflowerblue;
+}
+/*选中偶数行*/
+#table2 tr:nth-child(2n){
+	background-color: peachpuff;
+}
+/*选中奇数行*/
+#table2 tr:nth-child(2n+1){
+	background-color: chartreuse;
+}
+button{
+	border: none;
+	background-color: transparent;
+	font-size: 16px;	
+	outline: none;
+}
+
